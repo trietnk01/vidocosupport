@@ -20,7 +20,7 @@
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define( 'DB_NAME', 'kenview' );
+define( 'DB_NAME', 'vidocosupport' );
 
 /** Username của database */
 define( 'DB_USER', 'root' );
@@ -80,9 +80,9 @@ $table_prefix = 'zkv_';
 define('WP_DEBUG', false);
 define('WP_POST_REVISIONS', 1);
 define('AUTOMATIC_UPDATER_DISABLED',false);
-define('DISABLE_WP_CRON',false);
+/*define('DISABLE_WP_CRON',false);
 define('DISALLOW_FILE_EDIT',true);
-define('DISALLOW_FILE_MODS',true);
+define('DISALLOW_FILE_MODS',true);*/
 
 /* Đó là tất cả thiết lập, ngưng sửa từ phần này trở xuống. Chúc bạn viết blog vui vẻ. */
 
