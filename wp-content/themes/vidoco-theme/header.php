@@ -89,7 +89,7 @@
 						<span>Trung tâm trợ giúp Khách hàng - Hotline: </span><span class="tttg-hotline">1900 6750</span>
 					</div>
 					<form name="frm_tim_kiem" class="frm-tim-kiem" method="POST">
-						<div class="frm-textbox"><input type="text" name="s" value="" autocomplete="off"></div>
+						<div class="frm-textbox"><input type="text" name="s" value="" autocomplete="off" placeholder="Nhập nội dung bạn muốn tìm kiếm"></div>
 						<div class="frm-button">
 							<a href="javascript:void(0);">Tìm kiếm</a>
 						</div>

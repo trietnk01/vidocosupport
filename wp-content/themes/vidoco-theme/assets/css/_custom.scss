@@ -9,6 +9,7 @@ header{
 		left: 20px;
 		top: 20px;
 		width: 140px;
+		z-index: 1;
 	}
 	.mmenu{
 		float: right;
@@ -39,8 +40,26 @@ header{
 		color: #ffffff;
 		text-align: center;
 		font-size: 35px;
+		@media(max-width: 992px){
+			font-size:25px;
+		}
+		@media(max-width: 740px){
+			font-size:20px;
+		}
+		@media(max-width: 576px){
+			font-size:15px;
+		}
+		@media(max-width: 360px){
+			font-size:13px;
+		}
+		@media(max-width: 320px){
+			font-size:12px;
+		}
 		.tttg-hotline{
 			font-family: $f_bold;
+		}
+		span{
+			font-family: $f_light;
 		}
 	}
 	.frm-tim-kiem{
@@ -48,31 +67,85 @@ header{
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10px;
+		@media(max-width: 1024px){
+			width: 955px;
+		}
+		@media(max-width: 992px){
+			width: 700px;
+		}
+		@media(max-width: 740px){
+			width: 555px;
+		}
+		@media(max-width: 576px){
+			width: 390px;
+		}
+		@media(max-width: 375px){
+			width: 350px;
+		}
+		@media(max-width: 360px){
+			width: 335px;
+		}
+		@media(max-width: 320px){
+			width: 295px;
+		}
+		@media(max-width: 240px){
+			width: 100%;
+		}
 		.frm-textbox{
 			float: left;
-			width: 855px;
+			width: 835px;
+			@media(max-width: 1024px){
+				width: 800px;
+			}
+			@media(max-width: 992px){
+				width: 545px;
+			}
+			@media(max-width: 740px){
+				width: 400px;
+			}
+			@media(max-width: 576px){
+				width: 235px;
+			}
+			@media(max-width: 375px){
+				width: 195px;
+			}
+			@media(max-width: 360px){
+				width: 180px;
+			}
+			@media(max-width: 320px){
+				width: 140px;
+			}
+			@media(max-width: 240px){
+				width: 100%;
+			}
 			input{
 				width: 100%;
 				background:#ffffff;
-				border-radius:20px;
+				border-radius:25px;
 				outline: 0;
 				border:0;
-				padding:10px 10px;
+				padding:15px 10px;
 			}
 		}
 		.frm-button{
 			float: left;
 			margin-left: 10px;	
+			@media(max-width: 240px){
+				width: 100%;
+				margin-left: 0;
+				margin-top: 10px;
+			}
 			a{
 				color: #fff;
-				padding:10px 30px;
+				padding:15px 40px;
 				background :#2ad38b;
 				text-transform: uppercase;				
 				position: relative;
 				overflow: hidden;
 				z-index: 1;	
 				display: block;
-				border-radius: 20px;
+				border-radius: 25px;
+				text-align: center;
 				@include p-web(transition,all 0.5s);
 				&:hover{
 					&:before{
@@ -92,5 +165,131 @@ header{
 				}
 			}	
 		}
+	}
+}
+.cau-hoi-thuong-gap-wrapper{
+	margin-top: 40px;
+	border-bottom: 1px solid #d6d6d6;
+	padding-bottom: 15px;
+	.box-icon-cau-hoi-thuong-gap{
+		float: left;
+		width: 47px;
+		.icon-cau-hoi-thuong-gap{
+			background-image:url('../images/icon-question.png');
+			background-repeat:no-repeat;
+			background-size:cover;
+			padding-top:calc(100% / (47/34));
+		}
+	}
+	.chtg-txt{
+		float: left;
+		margin-left: 15px;		
+		a{			
+			font-size: 25px;		
+			font-family: $f_bold;		
+			@media(max-width: 240px){
+				font-size: 15px;
+				margin-top: 10px;
+			}
+		}		
+	}
+}
+.list-faqs-box{
+	margin-top: 20px;
+	.ul-question{
+		list-style: none;
+		padding-left:0;
+		.question-item{		
+			margin-bottom: 10px;	
+			>a{
+				position:relative;
+				display: block;
+				line-height: 30px;
+				padding-left:40px;
+				.number-circle{
+					background: #0088ff;
+					border-radius: 50%;
+					font-size: 14px;
+					color: #fff;
+					width: 26px;
+					height: 26px;
+					text-align: center;
+					line-height: 26px;
+					position: absolute;
+					top: 0px;
+					left: 0;
+				}
+				.question-text{
+					font-family: $f_bold;
+				}
+				.angle-down{
+					position: absolute;
+					right: 0;
+					top: 0;
+					font-size: 20px;
+				}
+			}			
+		}
+		.question-content{
+			text-align: justify;			
+		}
+		.content-off{
+			display: none;
+		}
+		.content-on{
+			display: block;
+		}
+	}	
+}
+.view-readmore-faq{
+	margin-top: 10px;
+	a{		
+		float: right;
+		font-size: 15px;
+		font-style: italic;
+		color: #42464e;		
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+.huong-dan-su-dung-box{
+	padding-top: 0px;
+	padding-bottom: 50px;
+	background: #f2f3f6;
+	margin-top: 35px;
+	.hdsd-sapo{
+		margin-top: 40px;				
+		.box-icon-cau-hoi-thuong-gap{
+			float: left;
+			width: 47px;
+			.icon-cau-hoi-thuong-gap{
+				background-image:url('../images/icon-guide.png');
+				background-repeat:no-repeat;
+				background-size:cover;
+				padding-top:calc(100% / (37/42));
+			}
+		}
+		.chtg-txt{
+			float: left;
+			margin-left: 15px;
+			margin-top: 5px;
+			a{			
+				font-size: 25px;		
+				font-family: $f_bold;		
+				@media(max-width: 240px){
+					font-size: 15px;
+					margin-top: 10px;
+				}
+			}		
+		}
+	}
+}
+.box-assist{
+	margin-top: 20px;
+	.box-dai{
+		height: 400px;
+		background-image: linear-gradient(#ffffff, #f2f3f6);
+		border-radius:15px;
 	}
 }
