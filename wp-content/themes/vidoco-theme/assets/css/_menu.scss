@@ -19,14 +19,14 @@
   >ul{    
     >li{
       >a{
-        font-family:$f_regular6;
+        font-family:$f_regular;
         font-size: 15px;
         text-transform: uppercase;               
         background:transparent;                 
-        padding:11px 20px;         
+        padding:35px 20px;         
         border-right: 0;
         @media(max-width: 1024px){
-          padding: 10px 13px;
+          padding: 35px 20px;
         } 
         &:link,&:visited{
           color: $mau;

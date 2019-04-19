@@ -11,6 +11,10 @@
 	src: url( '../fonts/Roboto/Roboto-BoldItalic.ttf' ) format('truetype');	 
 }
 @font-face {
+	font-family: 'Roboto-Light' ;
+	src: url( '../fonts/Roboto/Roboto-Light.ttf' ) format('truetype');	 
+}
+@font-face {
 	font-family: 'RobotoCondensed-Regular' ;
 	src: url( '../fonts/Roboto-Condensed/RobotoCondensed-Regular.ttf' ) format('truetype');	 
 }
@@ -65,6 +69,7 @@
 $f_regular:'Roboto-Regular';
 $f_bold:'Roboto-Bold';
 $f_bold_italic:'Roboto-BoldItalic';
+$f_light:'Roboto-Light';
 $f_regular2:'OpenSans-Regular';
 $f_bold2:'OpenSans-Bold';
 $f_bold_italic2:'OpenSans-BoldItalic';
