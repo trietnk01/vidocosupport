@@ -287,9 +287,12 @@ header{
 }
 .box-assist{
 	margin-top: 20px;
-	.box-dai{
-		height: 400px;
+	.box-dai{		
 		background-image: linear-gradient(#ffffff, #f2f3f6);
 		border-radius:15px;
+		padding:10px;
+		.guide{
+			text-align: center;
+		}
 	}
 }

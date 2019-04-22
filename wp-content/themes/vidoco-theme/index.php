@@ -112,7 +112,16 @@
 						<div class="row">
 							<div class="col-lg-3">
 								<div class="box-dai">
-									
+									<div class="guide">
+										<a href="javascript:void(0);">
+											<img src="<?php echo wp_get_upload_dir()["url"]."/icon-guide-1.png"; ?>">
+										</a>
+									</div>		
+									<div class="guide-title">
+										<a href="javascript:void(0)">
+											
+										</a>							
+									</div>									
 								</div>
 							</div>
 							<div class="col-lg-3">
