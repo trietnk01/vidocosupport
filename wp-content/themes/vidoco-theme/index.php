@@ -197,7 +197,7 @@
 		<div class="row margin-top-30">
 			<div class="col-md-6">
 				<div class="box-video">
-					<a href="javascript:void(0);">
+					<a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo "obJkObk8NJM"; ?>">
 						<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
 							<div class="box-overlay"></div>
 							<div class="box-icon">
@@ -274,6 +274,42 @@
 				<div class="col">
 					<img class="kht-img" src="<?php echo wp_get_upload_dir()["url"]."/icon-sendrequest.png"; ?>">
 					<h2 class="txt-ckht"><a href="javascript:void(0);">Các kênh hỗ trợ</a></h2>
+					<div class="clr"></div>
+					<div class="gui-ticket">Bạn vẫn cần trợ giúp, bạn hãy tạo yêu cầu hỗ trợ tại nút Gửi ticket hoặc Email: support@sapo.vn.</div>
+				</div>
+			</div>
+			<div class="row margin-top-20">
+				<div class="col-md-3">
+					<div class="box-ticket">
+						<a href="javascript:void(0);">
+							<img src="<?php echo wp_get_upload_dir()["url"]."/icon-sendrequest-1.png"; ?>">
+							<h3 class="icon-sendrequest">Hướng dẫn gửi yêu cầu hỗ trợ</h3>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box-ticket">
+						<a href="javascript:void(0);">
+							<img src="<?php echo wp_get_upload_dir()["url"]."/icon-sendrequest-2.png"; ?>">
+							<h3 class="icon-sendrequest">Kiểm tra ticket</h3>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box-ticket">
+						<a href="javascript:void(0);">
+							<img src="<?php echo wp_get_upload_dir()["url"]."/icon-sendrequest-3.png"; ?>">
+							<h3 class="icon-sendrequest2">Support@sapo.vn</h3>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box-ticket">
+						<a href="javascript:void(0);">
+							<img src="<?php echo wp_get_upload_dir()["url"]."/icon-sendrequest-4.png"; ?>">
+							<h3 class="icon-sendrequest">Cài đặt Ultraviewer/Teamviewer</h3>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

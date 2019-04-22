@@ -227,6 +227,9 @@ header{
 					right: 0;
 					top: 0;
 					font-size: 20px;
+					@media(max-width: 375px){
+						right: -10px;
+					}
 				}
 			}			
 		}
@@ -457,4 +460,132 @@ header{
 }
 .icon-img-ivan{
 	float: left;
+}
+.gui-ticket{
+	margin-left: 50px;
+	color: #fff;
+	margin-top: 10px;
+}
+.box-ticket{
+	@media(max-width: 740px){
+		margin-bottom: 40px;	
+	}	
+	a{
+		display: block;
+		text-align: center;
+		.icon-sendrequest{
+			font-size: 15px;
+			color: #ffffff;
+			margin-top: 10px;
+		}
+		.icon-sendrequest2{
+			font-size: 15px;
+			color: #ffffff;
+			margin-top: 25px;
+		}
+	}
+}
+footer{
+	background: #101010;
+	padding: 50px 0px;
+	.box-menu{
+		float: left;
+		@media(max-width: 740px){
+			float: none;
+		}
+		.h3-menu{
+			color:#d1d3d6;
+			font-size: 25px;
+		}
+		.footer-menu{
+			list-style: none;
+			padding-left:0;
+			margin-bottom: 0;
+			margin-top: 10px;
+			li{
+				a{
+					display: block;
+					color:#d1d3d6;
+					padding:5px 0px;
+				}
+			}
+		}
+		.box-footer-excerpt{
+			text-align: justify;
+			color: #d1d3d6;
+			margin-top: 15px;
+		}
+	}
+	.menu-left{
+		margin-left: 50px;   
+		@media(max-width: 1024px){
+			margin-left: 15px;
+		} 	
+		@media(max-width: 740px){
+			margin-left: 0;
+			margin-top: 30px;
+		}
+	}
+	.ktata{
+		margin-top: 30px;
+	}
+	.ketabox{
+		width: 435px;
+		margin-top: 30px;
+		@media(max-width: 1024px){
+			width: 380px;
+		}
+		@media(max-width: 992px){
+			width: 260px;
+		}
+		@media(max-width: 740px){
+			width: 100%;
+		}
+	}
+}
+.ctcpcn-vidoco{
+	color: #d1d3d6;
+}
+.limitratit{
+	text-transform: uppercase;
+	margin-top: 15px;
+}
+.ghitale{
+	margin-top: 10px;
+}
+.dv-ht{
+	margin-left: 50px;   
+	@media(max-width: 1024px){
+		margin-left: 15px;
+	}
+	@media(max-width: 992px){
+		margin-left: 0px;
+		margin-top: 30px;
+	} 	
+}
+.dv-ht2{
+	margin-left: 50px;   
+	@media(max-width: 1024px){
+		margin-left: 15px;
+	}
+	@media(max-width: 992px){
+		margin-left:55px;
+		margin-top: 30px;
+	} 
+	@media(max-width: 740px){
+		margin-left:0px;		
+	} 	
+}
+.ban-quyen{
+	color: #d1d3d6;
+    border-top: 1px solid #3f3d3d;
+    margin-top: 15px;
+    padding-top: 20px;
+	a{
+		color: #d1d3d6;
+	}
+}
+.breadcrumb-box{
+	border-bottom: 1px solid #dfe3e8;
+    padding: 10px 0px;    
 }
