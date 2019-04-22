@@ -9,9 +9,7 @@
 		<div class="row">
 			<div class="col">
 				<div class="cau-hoi-thuong-gap-wrapper">
-					<div class="box-icon-cau-hoi-thuong-gap">
-						<div class="icon-cau-hoi-thuong-gap"></div>
-					</div>		
+					<img src="<?php echo wp_get_upload_dir()["url"]."/icon-question.png"; ?>" class="icon-img-ivan">
 					<h2 class="chtg-txt"><a href="javascript:void(0);">Câu hỏi thường gặp</a></h2>		
 					<div class="clr"></div>
 				</div>	
@@ -102,45 +100,180 @@
 			<div class="row">
 				<div class="col">
 					<div class="hdsd-sapo">
-						<div class="box-icon-cau-hoi-thuong-gap">
-							<div class="icon-cau-hoi-thuong-gap"></div>
-						</div>		
+						<img src="<?php echo wp_get_upload_dir()["url"]."/icon-guide.png"; ?>" class="icon-img-ivan">
 						<h2 class="chtg-txt"><a href="javascript:void(0);">Hướng dẫn sử dụng</a></h2>			
 						<div class="clr"></div>
 					</div>	
 					<div class="box-assist">
 						<div class="row">
-							<div class="col-lg-3">
+							<div class="col-md-3">
 								<div class="box-dai">
 									<div class="guide">
 										<a href="javascript:void(0);">
-											<img src="<?php echo wp_get_upload_dir()["url"]."/icon-guide-1.png"; ?>">
+											<img src="<?php echo wp_get_upload_dir()["url"]."/icon-guide-1.png"; ?>">		
+											<div class="sapo-post">SAPO POS</div>								
+											<div class="sapo-post">Bán hàng tại cửa hàng</div>
 										</a>
-									</div>		
-									<div class="guide-title">
-										<a href="javascript:void(0)">
-											
-										</a>							
-									</div>									
+									</div>			
+									<ul>
+										<li><a href="javascript:void(0);">Tổng quan</a></li>
+										<li><a href="javascript:void(0);">Quản lý tài khoản</a></li>
+										<li><a href="javascript:void(0);">Sản phẩm phân hệ mới</a></li>
+										<li><a href="javascript:void(0);">Sản phẩm Sapo Pos</a></li>
+										<li><a href="javascript:void(0);">Khách hàng</a></li>
+									</ul>														
 								</div>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-md-3">
 								<div class="box-dai">
-									
+									<div class="guide">
+										<a href="javascript:void(0);">
+											<img src="<?php echo wp_get_upload_dir()["url"]."/icon-guide-1.png"; ?>">		
+											<div class="sapo-post">SAPO POS</div>								
+											<div class="sapo-post">Bán hàng tại cửa hàng</div>
+										</a>
+									</div>			
+									<ul>
+										<li><a href="javascript:void(0);">Tổng quan</a></li>
+										<li><a href="javascript:void(0);">Quản lý tài khoản</a></li>
+										<li><a href="javascript:void(0);">Sản phẩm phân hệ mới</a></li>
+										<li><a href="javascript:void(0);">Sản phẩm Sapo Pos</a></li>
+										<li><a href="javascript:void(0);">Khách hàng</a></li>
+									</ul>														
 								</div>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-md-3">
 								<div class="box-dai">
-									
+									<div class="guide">
+										<a href="javascript:void(0);">
+											<img src="<?php echo wp_get_upload_dir()["url"]."/icon-guide-1.png"; ?>">		
+											<div class="sapo-post">SAPO POS</div>								
+											<div class="sapo-post">Bán hàng tại cửa hàng</div>
+										</a>
+									</div>			
+									<ul>
+										<li><a href="javascript:void(0);">Tổng quan</a></li>
+										<li><a href="javascript:void(0);">Quản lý tài khoản</a></li>
+										<li><a href="javascript:void(0);">Sản phẩm phân hệ mới</a></li>
+										<li><a href="javascript:void(0);">Sản phẩm Sapo Pos</a></li>
+										<li><a href="javascript:void(0);">Khách hàng</a></li>
+									</ul>														
 								</div>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-md-3">
 								<div class="box-dai">
-									
+									<div class="guide">
+										<a href="javascript:void(0);">
+											<img src="<?php echo wp_get_upload_dir()["url"]."/icon-guide-1.png"; ?>">		
+											<div class="sapo-post">SAPO POS</div>								
+											<div class="sapo-post">Bán hàng tại cửa hàng</div>
+										</a>
+									</div>			
+									<ul>
+										<li><a href="javascript:void(0);">Tổng quan</a></li>
+										<li><a href="javascript:void(0);">Quản lý tài khoản</a></li>
+										<li><a href="javascript:void(0);">Sản phẩm phân hệ mới</a></li>
+										<li><a href="javascript:void(0);">Sản phẩm Sapo Pos</a></li>
+										<li><a href="javascript:void(0);">Khách hàng</a></li>
+									</ul>														
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="video-huong-dan">
+					<img src="<?php echo wp_get_upload_dir()["url"]."/icon-video-guide.png"; ?>" class="icon-img-ivan">	
+					<h2 class="chtg-txt"><a href="javascript:void(0);">Video hướng dẫn</a></h2>			
+					<div class="clr"></div>
+				</div>				
+			</div>
+		</div>
+		<div class="row margin-top-30">
+			<div class="col-md-6">
+				<div class="box-video">
+					<a href="javascript:void(0);">
+						<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
+							<div class="box-overlay"></div>
+							<div class="box-icon">
+								<div class="box-icon2"><i class="fas fa-play"></i></div>								
+							</div>
+							<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
+						</div>
+					</a>					
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="box-video2">
+							<a href="javascript:void(0);">
+								<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
+									<div class="box-overlay"></div>
+									<div class="box-icon">
+										<div class="box-icon2"><i class="fas fa-play"></i></div>								
+									</div>
+									<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
+								</div>
+							</a>					
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="box-video2">
+							<a href="javascript:void(0);">
+								<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
+									<div class="box-overlay"></div>
+									<div class="box-icon">
+										<div class="box-icon2"><i class="fas fa-play"></i></div>								
+									</div>
+									<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
+								</div>
+							</a>					
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="box-video2">
+							<a href="javascript:void(0);">
+								<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
+									<div class="box-overlay"></div>
+									<div class="box-icon">
+										<div class="box-icon2"><i class="fas fa-play"></i></div>								
+									</div>
+									<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
+								</div>
+							</a>					
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="box-video2">
+							<a href="javascript:void(0);">
+								<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
+									<div class="box-overlay"></div>
+									<div class="box-icon">
+										<div class="box-icon2"><i class="fas fa-play"></i></div>								
+									</div>
+									<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
+								</div>
+							</a>					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cac-kenh-ho-tro">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<img class="kht-img" src="<?php echo wp_get_upload_dir()["url"]."/icon-sendrequest.png"; ?>">
+					<h2 class="txt-ckht"><a href="javascript:void(0);">Các kênh hỗ trợ</a></h2>
 				</div>
 			</div>
 		</div>

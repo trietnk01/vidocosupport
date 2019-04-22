@@ -257,42 +257,204 @@ header{
 	padding-top: 0px;
 	padding-bottom: 50px;
 	background: #f2f3f6;
-	margin-top: 35px;
-	.hdsd-sapo{
-		margin-top: 40px;				
-		.box-icon-cau-hoi-thuong-gap{
-			float: left;
-			width: 47px;
-			.icon-cau-hoi-thuong-gap{
-				background-image:url('../images/icon-guide.png');
-				background-repeat:no-repeat;
-				background-size:cover;
-				padding-top:calc(100% / (37/42));
-			}
-		}
-		.chtg-txt{
-			float: left;
-			margin-left: 15px;
-			margin-top: 5px;
-			a{			
-				font-size: 25px;		
-				font-family: $f_bold;		
-				@media(max-width: 240px){
-					font-size: 15px;
-					margin-top: 10px;
-				}
-			}		
-		}
-	}
+	margin-top: 35px;	
 }
 .box-assist{
 	margin-top: 20px;
 	.box-dai{		
 		background-image: linear-gradient(#ffffff, #f2f3f6);
 		border-radius:15px;
-		padding:10px;
+		padding-top:20px;
+		padding-bottom:10px;
+		padding-left:10px;
+		padding-right: 10px;
 		.guide{
 			text-align: center;
+			.sapo-post{
+				font-family: $f_bold;
+				color: #0088ff;
+				margin-top: 5px;
+				font-size: 20px;
+			}
+		}		
+		ul{
+			list-style: none;
+			padding-left:0;
+			li{
+				text-align: center;
+				a{
+					font-size: 15px;
+					display: block;
+					border-bottom: 1px dashed #e3e3e3;
+					padding-bottom: 10px;
+					margin-top: 10px;
+				}
+			}
 		}
 	}
+}
+.hdsd-sapo{
+	margin-top: 40px;				
+	.box-icon-cau-hoi-thuong-gap{
+		float: left;
+		width: 47px;
+		.icon-cau-hoi-thuong-gap{
+			background-image:url('../images/icon-guide.png');
+			background-repeat:no-repeat;
+			background-size:cover;
+			padding-top:calc(100% / (37/42));
+		}
+	}
+	.chtg-txt{
+		float: left;
+		margin-left: 15px;		
+		a{			
+			font-size: 25px;		
+			font-family: $f_bold;		
+			@media(max-width: 240px){
+				font-size: 15px;
+				margin-top: 10px;
+			}
+		}		
+	}
+}
+.video-huong-dan{
+	margin-top: 40px;				
+	.box-icon-cau-hoi-thuong-gap{
+		float: left;
+		width: 47px;
+		.icon-cau-hoi-thuong-gap{
+			background-image:url('../images/icon-video-guide.png');
+			background-repeat:no-repeat;
+			background-size:cover;
+			padding-top:calc(100% / (43/34));
+		}
+	}
+	.chtg-txt{
+		float: left;
+		margin-left: 15px;		
+		a{			
+			font-size: 25px;		
+			font-family: $f_bold;		
+			@media(max-width: 240px){
+				font-size: 15px;
+				margin-top: 10px;
+			}
+		}		
+	}
+}
+.box-video{	
+	@media(max-width: 740px){
+		margin-bottom: 10px;
+	}
+	a{
+		position:relative;
+		display: block;
+		.box-overlay{
+			position:absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background:#000;
+			opacity: 0.3;	
+		}
+		.box-icon{
+			position:absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			.box-icon2{
+				width: 60px;
+				height: 60px;
+				border-radius: 30px;
+				border: 2px solid #ffffff;
+				color: #ffffff;
+				font-size: 25px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		.tqpmqlbh-sapo{
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #ffffff;
+			font-size: 20px;
+		}
+	}	
+}
+
+.box-video2{	
+	margin-bottom: 14px;
+	a{
+		position:relative;
+		display: block;
+		.box-overlay{
+			position:absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background:#000;
+			opacity: 0.3;	
+		}
+		.box-icon{
+			position:absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			.box-icon2{
+				width: 40px;
+				height: 40px;
+				border-radius: 30px;
+				border: 2px solid #ffffff;
+				color: #ffffff;
+				font-size: 15px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		.tqpmqlbh-sapo{
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #ffffff;
+			font-size: 12px;
+		}
+	}	
+}
+.cac-kenh-ho-tro{
+	background-image:url('../images/bg-sendrequest.png');
+	padding:30px 0px;
+	.kht-img{
+		float: left;
+	}
+	.txt-ckht{
+		margin-left: 50px;
+		a{
+			color: #ffffff;
+			font-family: $f_bold;
+			font-size: 25px;
+		}
+	}
+}
+.icon-img-ivan{
+	float: left;
 }
