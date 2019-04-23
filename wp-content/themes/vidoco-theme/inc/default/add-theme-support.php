@@ -12,7 +12,8 @@ function p_load_support(){
             "seo_marketing"    => __( "SEO marketing"),
             "dich_vu"    => __( "Dịch vụ"),                                    
             "hop_tac"    => __( "Hợp tác"),
-            "tro_giup"    => __( "Trợ giúp"),                                    
+            "tro_giup"    => __( "Trợ giúp"),          
+            "category_product"    => __( "Danh mục sản phẩm"),                                    
         )
     );
 

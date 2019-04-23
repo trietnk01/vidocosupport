@@ -12,7 +12,7 @@ $the_query=$wp_query;
 
 /* end set the_query */
 /* start setup pagination */
-$totalItemsPerPage=20;
+$totalItemsPerPage=10;
 $pageRange=3;
 $currentPage=1; 
 if(!empty(@$_POST["filter_page"]))          {
@@ -31,20 +31,12 @@ $arrPagination=array(
 $pagination=$zController->getPagination("Pagination",$arrPagination); 
 /* end setup pagination */
 ?>
-
 <div class="container">
-	<?php include get_template_directory()."/block/block-breadcrumb.php"; ?>
 	<div class="row">
-		<div class="col">
-			<?php include get_template_directory()."/block/block-search-video.php"; ?>
+		<div class="col-lg-3">
+			<?php include get_template_directory()."/block/block-category-menu-product.php";?>
 		</div>
-	</div>
-	<div class="row">
-		<!--<div class="col-lg-3">
-			<?php include get_template_directory()."/block/block-category-menu-product.php"; ?>
-			<?php include get_template_directory()."/block/block-support-online.php"; ?>
-		</div>-->
-		<div class="col">
+		<div class="col-lg-9">
 			<form class="category-video" method="POST">
 				<input type="hidden" name="filter_page" value="1" />
 				<h1 class="category-video-title"><?php single_cat_title(); ?></h1>
@@ -59,37 +51,32 @@ $pagination=$zController->getPagination("Pagination",$arrPagination);
 							$title=get_the_title($post_id);																
 							$video_id=get_field("video_id",@$post_id);
 							$featured_img=get_the_post_thumbnail_url($post_id, 'full');	 
-							$date_post=get_the_date('l , j F , Y H:i',@$post_id);       
-							if($k%2 == 0){
-								echo '<div class="row">';
-							}
+							$date_post=get_the_date('l , j F , Y',@$post_id);       							
 							?>
-							<div class="col-lg-6">
-								<div class="video-item-box">							
-									<div class="video-pin-box">
-										<a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo @$video_id; ?>">
-											<div style="background-image: url('<?php echo @$featured_img; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100% / (359/199));">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="video-item-box">							
+										<div class="video-pin-box">
+											<a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo @$video_id; ?>">
+												<div style="background-image: url('<?php echo @$featured_img; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100% / (359/199));">
 
-											</div>	
-											<div class="overlay-youtube">										
-											</div>
-											<div class="youtube-icon">
-												<img src="<?php echo wp_get_upload_dir()["url"].'/youtube-icon.png'; ?>">
-											</div>								
-										</a>							
-									</div>		
-									<div class="video-right-box">
-										<h3 class="video-item-title"><a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo @$video_id; ?>"><?php echo @$title; ?></a></h3>
-										<div class="ngay-dang">Ngày đăng : <?php echo @$date_post; ?></div>
-									</div>		
-									<div class="clr"></div>									
+												</div>	
+												<div class="overlay-youtube">										
+												</div>
+												<div class="youtube-icon">
+													<img src="<?php echo wp_get_upload_dir()["url"].'/youtube-icon.png'; ?>">
+												</div>								
+											</a>							
+										</div>		
+										<div class="video-right-box">
+											<h3 class="video-item-title"><a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo @$video_id; ?>"><?php echo @$title; ?></a></h3>
+											<div class="ngay-dang">Ngày đăng : <?php echo @$date_post; ?></div>
+										</div>		
+										<div class="clr"></div>									
+									</div>
 								</div>
-							</div>
-							<?php
-							$k++;
-							if($k%2 == 0 || $k == $the_query->post_count){
-								echo '</div>';
-							}
+							</div>							
+							<?php							
 						}
 						wp_reset_postdata();
 						?>

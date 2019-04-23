@@ -589,3 +589,246 @@ footer{
 	border-bottom: 1px solid #dfe3e8;
     padding: 10px 0px;    
 }
+.danh-muc-san-pham{
+	margin-top: 20px;
+	.menu-dmsp-title{
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #0580B8;
+		text-align: center;
+		font-size: 15px;
+		padding: 10px 0px;
+	}
+	.menu-dmsp-ul{
+		list-style: none;
+		padding-left:0;
+		margin-bottom: 0;
+		border-left:1px solid #cdcdcd;
+		border-right:1px solid #cdcdcd;
+		border-bottom:1px solid #cdcdcd;
+		li{
+			padding:0px 10px;			
+			a{
+				display: block;
+				border-bottom: 1px dotted #cdcdcd;
+				padding: 5px 0px;
+				span{
+					&:first-child{
+						margin-right:10px;
+					}
+				}
+			}
+			&:last-child{
+				a{
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+.box-post{
+	margin-top: 20px;
+	.post-title{
+		color: #555555;
+		font-size: 20px;		
+	}	
+	.post-exceprt{
+		margin-top: 20px;
+		font-style: italic;
+		text-align: justify;
+		border-top: 1px dotted #ddd;
+		border-bottom: 1px dotted #ddd;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.post-content{
+		text-align: justify;
+		margin-top: 20px;
+	}
+	.post-related-title{
+		margin-top: 20px;
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+	.post-related-lst{
+		list-style: none;
+		padding-left:0;
+		margin-top: 10px;
+		li{
+			a{
+				display: block;
+				padding-left: 15px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				span{
+					&:last-child{
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}	
+}
+.rapidshare{
+	margin-top: 25px;
+	.facebook_button{
+		margin-left: 0px;
+		float: left;
+	}
+	.facebook_like_button{
+		margin-left: 10px;
+		float: left;
+	}
+	.category_twitter_sg{
+		margin-top: 2px;
+		margin-left: 10px;
+		float: left;
+		@media(max-width: 1024px){
+			margin-left: 5px;
+		}
+	}
+	.category_linkedin_sg{
+		margin-top:2px;
+		margin-left: 10px;
+		float: left;
+		@media(max-width: 1024px){
+			margin-left: 5px;
+		}
+	}
+	.category_g_plus_sg{			
+		margin-left: 10px;
+		float: left;
+		@media(max-width: 1024px){
+			margin-left: 5px;
+		}
+	}
+}
+.category-video{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	.category-video-title{
+		background: #cccccc;
+		color: #0580B8;
+		font-size: 20px;
+		text-transform: uppercase;
+		padding: 7px 15px;
+	}
+	.category-videos-box-842823{
+		margin-top: 10px;		
+	}
+}
+.video-item-box{
+	margin-bottom: 40px;
+	border: 1px solid #f1f1f1;
+	padding: 10px;
+	box-shadow: 1px 1px 5px #f1f1f1;
+	@media(max-width: 992px){
+		margin-bottom: 10px;
+	}
+	.video-item-title{
+		line-height:15px;
+		a{
+			font-size: 15px;
+			font-weight: bold;
+			@media(max-width: 1024px){
+				font-size: 12px;
+			}
+			@media(max-width: 992px){
+				font-size: 15px;
+			}
+			@media(max-width: 576px){
+				font-size: 12px;
+			}
+		}
+	}
+	.video-pin-box{
+		float: left;
+		width: 120px;
+		@media(max-width: 576px){
+			width: 100px;
+		}
+		@media(max-width: 240px){
+			width: 65px;
+		}
+		a{
+			display: block;
+			position:relative;		
+			.overlay-youtube{
+				background:#00000054;
+				position:absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;		
+				@include p-web(transition,all 500ms);			
+			}
+			.youtube-icon{
+				position:absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				align-items:center;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				@include p-web(transition,all 500ms);	
+			}	
+			&:hover{
+				.overlay-youtube{
+					opacity: 1;
+				}
+				.youtube-icon{
+					opacity: 1;
+				}
+			}				
+		}			
+	}
+	.video-right-box{
+		float: left;
+		margin-left: 10px;
+		width: 325px;
+		@media(max-width: 1024px){
+			width: 280px;
+		}
+		@media(max-width: 992px){
+			width: 520px;
+		}
+		@media(max-width: 740px){
+			width: 345px;
+		}
+		@media(max-width: 576px){
+			width:250px;
+		}
+		@media(max-width: 375px){
+			width:210px;
+		}
+		@media(max-width: 360px){
+			width:195px;
+		}
+		@media(max-width: 320px){
+			width:155px;
+		}
+		@media(max-width: 240px){
+			width:110px;
+		}
+		.ngay-dang{
+			margin-top: 15px;
+			color: #858585;
+			@media(max-width: 1024px){				
+				font-size: 10px;
+			}	
+			@media(max-width: 992px){				
+				font-size: 13px;
+			}
+			@media(max-width: 576px){
+				font-size: 12px;
+				margin-top: 0;
+			}	
+			@media(max-width: 375px){
+				display: none;
+			}						
+		}
+	}
+}
