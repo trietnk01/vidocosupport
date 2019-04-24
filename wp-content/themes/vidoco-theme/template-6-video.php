@@ -30,6 +30,7 @@ $arrPagination=array(
 );    
 $pagination=$zController->getPagination("Pagination",$arrPagination); 
 /* end setup pagination */
+include get_template_directory()."/block/block-breadcrumb.php";
 ?>
 <div class="container">
 	<div class="row">

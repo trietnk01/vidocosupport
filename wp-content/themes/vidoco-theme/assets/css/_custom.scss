@@ -578,16 +578,16 @@ footer{
 }
 .ban-quyen{
 	color: #d1d3d6;
-    border-top: 1px solid #3f3d3d;
-    margin-top: 15px;
-    padding-top: 20px;
+	border-top: 1px solid #3f3d3d;
+	margin-top: 15px;
+	padding-top: 20px;
 	a{
 		color: #d1d3d6;
 	}
 }
 .breadcrumb-box{
 	border-bottom: 1px solid #dfe3e8;
-    padding: 10px 0px;    
+	padding: 10px 0px;    
 }
 .danh-muc-san-pham{
 	margin-top: 20px;
@@ -829,6 +829,247 @@ footer{
 			@media(max-width: 375px){
 				display: none;
 			}						
+		}
+	}
+}
+.box-faq{
+	margin-bottom: 20px;
+	.ul-faq{
+		margin-top: 20px;
+		list-style: none;
+		padding-left:0;
+		.question-item2{		
+			margin-bottom: 10px;
+			border-bottom: 1px solid #e8e8e8;
+			padding-bottom: 10px;
+			>a{
+				position:relative;
+				display: block;
+				line-height: 30px;			
+				.number-circle{
+					background: #0088ff;
+					border-radius: 50%;
+					font-size: 14px;
+					color: #fff;
+					width: 26px;
+					height: 26px;
+					text-align: center;
+					line-height: 26px;
+					position: absolute;
+					top: 0px;
+					left: 0;
+				}
+				.question-text{
+					font-family: $f_bold;
+				}
+				.angle-down{
+					position: absolute;
+					right: 0;
+					top: 0;
+					font-size: 10px;
+					background: #0580B8;
+					padding: 0px 10px;
+					color: #fff;
+					border-radius: 15px;
+					@media(max-width: 375px){
+						right: -10px;
+					}
+				}
+			}			
+		}
+		.question-content2{
+			text-align: justify;			
+		}
+		.content-off{
+			display: none;
+		}
+		.content-on{
+			display: block;
+		}
+	}	
+}
+.box-doc{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	.xay-dung-giao-dien-website-bh{
+		text-align: center;
+		font-size: 30px;
+		font-family: $f_light;
+	}
+	.tl-pt-gus{
+		margin-bottom: 20px;
+		.karazama{
+			text-align: center;
+			font-size: 20px;
+			font-family: $f_bold;
+		}		
+		.liquid-la-ngon-ngu{
+			margin-top: 15px;
+			text-align: center;
+			color: #868686;
+		}
+		.liquid-readmore{
+			text-align: center;
+			margin-top: 20px;
+			@media(max-width: 240px){
+				width: 100%;
+				margin-left: 0;
+				margin-top: 10px;
+			}
+			a{
+				color: #fff;
+				padding:15px 40px;
+				background :#2ad38b;
+				text-transform: uppercase;				
+				position: relative;
+				overflow: hidden;
+				z-index: 1;	
+				display: inline-block;
+				border-radius: 25px;
+				text-align: center;
+				@include p-web(transition,all 0.5s);
+				&:hover{
+					&:before{
+						left: 0;
+					}
+				}
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 100%;					
+					width: 100%;
+					height: 100%;
+					background:#0E70B9;
+					z-index: -1;
+					@include p-web(transition, all 0.5s);
+				}
+			}	
+		}
+	}
+}
+.phat-trien-ung-dung{
+	background-color:#f3fbfe;
+	padding:40px 0px;
+	.phat-trien-ud-cua-ban-mot-cach-de-dang{
+		text-align: center;
+		font-size: 35px;
+		font-family: $f_light;
+	}	
+	.thu-vien-lap-trinh{
+		margin-top: 25px;
+		.thu-vien-lap-trinh-va-api-mo-rong{
+			font-family: $f_bold;
+			font-size: 20px;
+			position:relative;
+			padding-bottom: 15px;
+			&:before{
+				content: "";
+				position:absolute;
+				bottom:0;
+				left: 0;
+				width: 80px;
+				border-bottom:2px solid #1792FC;			
+			}
+		}
+		.ban-hoan-toan{
+			margin-top: 30px;
+			list-style: none;
+			padding-left:0;
+			margin-bottom: 0;
+			.li-ban-hoan-toan{
+				margin-bottom: 10px;
+				position:relative;
+				padding-left:35px;
+				.ban-hoan-tona-fa-check{
+					color: #ffffff;
+					background-color: #1792FC;
+					padding: 4px 6px;
+					font-size: 9px;
+					border-radius: 10px;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				.ban-hoan-toan-text{
+					margin-left: 10px;
+				}
+			}
+		}
+		.thu-vien-lt-readmore{		
+			margin-top: 20px;
+			@media(max-width: 240px){
+				width: 100%;
+				margin-left: 0;
+				margin-top: 10px;
+			}
+			a{
+				color: #fff;
+				padding:15px 40px;
+				background :#2ad38b;
+				text-transform: uppercase;				
+				position: relative;
+				overflow: hidden;
+				z-index: 1;	
+				display: inline-block;
+				border-radius: 25px;
+				text-align: center;
+				@include p-web(transition,all 0.5s);
+				&:hover{
+					&:before{
+						left: 0;
+					}
+				}
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 100%;					
+					width: 100%;
+					height: 100%;
+					background:#0E70B9;
+					z-index: -1;
+					@include p-web(transition, all 0.5s);
+				}
+			}	
+		}
+	}
+}
+.ban-can-them-su-ho-tro-box{
+	background-image:url('../images/bg-sendrequest.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	padding:30px 0px;
+	.developer-helper-box{
+		text-align: right;
+	}
+	.box-ban-can-ht{
+		margin-top: 65px;
+		.bcht-text{
+			font-family: $f_light;
+			color: #ffffff;
+			text-align: center;
+			font-size: 40px;
+		}
+		.lien-he-ngay{
+			font-family: $f_bold;
+			font-size: 30px;
+			color: #ffffff;
+			text-align: center;
+			margin-top: 40px;
+		}	
+		.phu-trach-quan-ly-doi-tac{
+			text-align: center;
+			color: #ffffff;
+			font-size: 20px;
+			font-family: $f_light;
+			margin-top: 15px;
+		}	
+		.phu-trach-info{
+			text-align: center;
+			color: #ffffff;
+			font-size: 15px;
+			font-family: $f_light;
 		}
 	}
 }

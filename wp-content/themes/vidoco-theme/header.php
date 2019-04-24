@@ -11,7 +11,7 @@
 <body >
 	<header>
 		<div class="logo">
-			<a href="javascript:void(0);">
+			<a href="<?php echo site_url( '',null ); ?>">
 				<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/logo.png"; ?>');background-repeat: no-repeat;background-size: cover;padding-top: calc(100%/(240/80))">
 					
 				</div>				
