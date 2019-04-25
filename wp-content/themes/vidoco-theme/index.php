@@ -13,85 +13,145 @@
 					<h2 class="chtg-txt"><a href="javascript:void(0);">Câu hỏi thường gặp</a></h2>		
 					<div class="clr"></div>
 				</div>	
-				<div class="list-faqs-box">
-					<div class="row">
-						<div class="col-md-6">
-							<ul class="ul-question">
-								<li class="question-item">
-									<a href="javascript:void(0);">
-										<span class="number-circle">1</span>
-										<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-										<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-									</a>
-									<div class="question-content content-off">
-										<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 1</p>
-									</div>
-								</li>
-								<li class="question-item">
-									<a href="javascript:void(0);">
-										<span class="number-circle">2</span>
-										<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-										<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-									</a>
-									<div class="question-content content-off">
-										<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 2</p>
-									</div>
-								</li>
-								<li class="question-item">
-									<a href="javascript:void(0);">
-										<span class="number-circle">3</span>
-										<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-										<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-									</a>
-									<div class="question-content content-off">
-										<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 3</p>
-									</div>
-								</li>
-							</ul>
+				<?php 
+				$args=array(
+					"post_type"=>"zafaq",
+					"orderby"=>"id",
+					"order"=>"desc",
+					"posts_per_page"=>6,										
+				);
+				$the_query=new WP_Query($args); 
+				$source_faq=array();
+				if($the_query->have_posts()){
+					while($the_query->have_posts()){
+						$the_query->the_post();
+						$post_id=$the_query->post->ID;                                                       
+						$title=get_the_title(@$post_id);											
+						$row_faq=array(
+							"title"=>@$title
+						);
+						$source_faq[]=$row_faq;
+					}
+					wp_reset_postdata();					
+					?>
+					<div class="list-faqs-box">
+						<div class="row">
+							<div class="col-md-6">
+								<ul class="ul-question">	
+									<?php 
+									$k=1;
+									for ($i=0; $i < 3; $i++) { 
+										?>
+										<li class="question-item">
+											<a href="javascript:void(0);">
+												<span class="number-circle"><?php echo @$k; ?></span>
+												<span class="question-text"><?php echo @$source_faq[$i]["title"]; ?></span>
+												<span class="angle-down"><i class="fas fa-angle-down"></i></span>
+											</a>
+											<div class="question-content content-off">
+												<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 1</p>
+											</div>
+										</li>
+										<?php
+										$k++;
+									}
+									?>							
+									<!--<li class="question-item">
+										<a href="javascript:void(0);">
+											<span class="number-circle">1</span>
+											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
+											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
+										</a>
+										<div class="question-content content-off">
+											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 1</p>
+										</div>
+									</li>
+									<li class="question-item">
+										<a href="javascript:void(0);">
+											<span class="number-circle">2</span>
+											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
+											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
+										</a>
+										<div class="question-content content-off">
+											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 2</p>
+										</div>
+									</li>
+									<li class="question-item">
+										<a href="javascript:void(0);">
+											<span class="number-circle">3</span>
+											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
+											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
+										</a>
+										<div class="question-content content-off">
+											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 3</p>
+										</div>
+									</li>-->
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<ul class="ul-question">
+									<?php 
+									$k=4;
+									for ($i=3; $i < 6; $i++) { 
+										?>
+										<li class="question-item">
+											<a href="javascript:void(0);">
+												<span class="number-circle"><?php echo @$k; ?></span>
+												<span class="question-text"><?php echo @$source_faq[$i]["title"]; ?></span>
+												<span class="angle-down"><i class="fas fa-angle-down"></i></span>
+											</a>
+											<div class="question-content content-off">
+												<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 1</p>
+											</div>
+										</li>
+										<?php
+										$k++;
+									}
+									?>		
+									<!--<li class="question-item">
+										<a href="javascript:void(0);">
+											<span class="number-circle">4</span>
+											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
+											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
+										</a>
+										<div class="question-content content-off">
+											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 4</p>
+										</div>
+									</li>
+									<li class="question-item">
+										<a href="javascript:void(0);">
+											<span class="number-circle">5</span>
+											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
+											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
+										</a>
+										<div class="question-content content-off">
+											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 5</p>
+										</div>
+									</li>
+									<li class="question-item">
+										<a href="javascript:void(0);">
+											<span class="number-circle">6</span>
+											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
+											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
+										</a>
+										<div class="question-content content-off">
+											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 6</p>
+										</div>
+									</li>-->
+								</ul>
+							</div>
 						</div>
-						<div class="col-md-6">
-							<ul class="ul-question">
-								<li class="question-item">
-									<a href="javascript:void(0);">
-										<span class="number-circle">4</span>
-										<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-										<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-									</a>
-									<div class="question-content content-off">
-										<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 4</p>
-									</div>
-								</li>
-								<li class="question-item">
-									<a href="javascript:void(0);">
-										<span class="number-circle">5</span>
-										<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-										<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-									</a>
-									<div class="question-content content-off">
-										<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 5</p>
-									</div>
-								</li>
-								<li class="question-item">
-									<a href="javascript:void(0);">
-										<span class="number-circle">6</span>
-										<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-										<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-									</a>
-									<div class="question-content content-off">
-										<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 6</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>		
-				<div class="view-readmore-faq">
-					<a href="javascript:void(0);">
-						<img src="<?php echo wp_get_upload_dir()["url"]."/icon-viewmore.png"; ?>">
-						<span>Xem thêm câu hỏi</span>
-					</a>
-					<div class="clr"></div>
-				</div>	
+					</div>		
+					<div class="view-readmore-faq">
+						<a href="javascript:void(0);">
+							<img src="<?php echo wp_get_upload_dir()["url"]."/icon-viewmore.png"; ?>">
+							<span>Xem thêm câu hỏi</span>
+						</a>
+						<div class="clr"></div>
+					</div>	
+					<?php
+				}
+				?>				
 			</div>
 		</div>
 	</div>
