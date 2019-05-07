@@ -30,16 +30,14 @@ $arrPagination=array(
 );
 $pagination=$zController->getPagination("Pagination",$arrPagination);
 /* end setup pagination */
+include get_template_directory()."/block/block-breadcrumb.php";
 ?>
 <div class="container">
-    <?php include get_template_directory()."/block/block-breadcrumb.php"; ?>
     <div class="row">
-        <div class="col">
-            <?php include get_template_directory()."/block/block-search-video.php"; ?>
+        <div class="col-lg-3">
+            <?php include get_template_directory()."/block/block-category-menu-product.php";?>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
+        <div class="col-lg-9">
             <form class="category-video" method="POST">
                 <input type="hidden" name="filter_page" value="1" />
                 <h1 class="category-video-title"><?php single_cat_title(); ?></h1>
