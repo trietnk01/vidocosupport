@@ -33,3 +33,9 @@ acf_add_options_sub_page(array(
 	'menu_slug' 	=> 'p_option_banner',
 	'parent_slug'	=> 'p_option_page',
 ));
+acf_add_options_sub_page(array(
+	'page_title' 	=> 'Footer',
+	'menu_title'	=> 'Footer',
+	'menu_slug' 	=> 'p_option_footer',
+	'parent_slug'	=> 'p_option_page',
+));

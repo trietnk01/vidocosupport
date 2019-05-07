@@ -27,8 +27,10 @@
 						$the_query->the_post();
 						$post_id=$the_query->post->ID;
 						$title=get_the_title(@$post_id);
+						$content = apply_filters('the_content',get_the_content( null, false ));
 						$row_faq=array(
-							"title"=>@$title
+							"title"=>@$title,
+							"content"=>@$content
 						);
 						$source_faq[]=$row_faq;
 					}
@@ -49,7 +51,7 @@
 												<span class="angle-down"><i class="fas fa-angle-down"></i></span>
 											</a>
 											<div class="question-content content-off">
-												<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 1</p>
+												<?php echo @$source_faq[$i]["content"]; ?>
 											</div>
 										</li>
 										<?php
@@ -71,43 +73,13 @@
 												<span class="angle-down"><i class="fas fa-angle-down"></i></span>
 											</a>
 											<div class="question-content content-off">
-												<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 1</p>
+												<?php echo @$source_faq[$i]["content"]; ?>
 											</div>
 										</li>
 										<?php
 										$k++;
 									}
 									?>
-									<!--<li class="question-item">
-										<a href="javascript:void(0);">
-											<span class="number-circle">4</span>
-											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-										</a>
-										<div class="question-content content-off">
-											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 4</p>
-										</div>
-									</li>
-									<li class="question-item">
-										<a href="javascript:void(0);">
-											<span class="number-circle">5</span>
-											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-										</a>
-										<div class="question-content content-off">
-											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 5</p>
-										</div>
-									</li>
-									<li class="question-item">
-										<a href="javascript:void(0);">
-											<span class="number-circle">6</span>
-											<span class="question-text">Tôi muốn đăng ký dùng thử phần mềm Sapo thì làm thế nào?</span>
-											<span class="angle-down"><i class="fas fa-angle-down"></i></span>
-										</a>
-										<div class="question-content content-off">
-											<p>Sapo là phần mềm quản lý bán hàng với nhiều tính năng thông minh, tiện lợi, dễ sử dụng nhất. Nhằm hỗ trợ bạn&nbsp;có thể trải nghiệm tất cả những tính năng này, chúng tôi đã cung cấp dịch vụ DÙNG THỬ MIỄN PHÍ 15 NGÀY. Để đăng ký dùng thử miễn phí, Bạn truy cập vào trang: sapo.vn &gt; Nhấp chọn Dùng thử miễn phí và thực hiện theo hướng dẫn tạo tài khoản <a href="/tao-tai-khoan-trai-nghiem-mien-phi-pos"><strong>tại đây</strong></a> 6</p>
-										</div>
-									</li>-->
 								</ul>
 							</div>
 						</div>
@@ -226,75 +198,89 @@
 		</div>
 		<div class="row margin-top-30">
 			<div class="col-md-6">
-				<div class="box-video">
-					<a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo "obJkObk8NJM"; ?>">
-						<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
-							<div class="box-overlay"></div>
-							<div class="box-icon">
-								<div class="box-icon2"><i class="fas fa-play"></i></div>
-							</div>
-							<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
+				<?php
+				$hp_video_hd_featured_video=get_field("hp_video_hd_featured_video","option");
+				$args=array(
+					"post_type"=>"zavideo",
+					"p"=>@$hp_video_hd_featured_video
+				);
+				$the_query=new WP_Query($args);
+				if($the_query->have_posts()){
+					while ($the_query->have_posts()) {
+						$the_query->the_post();
+						$post_id=$the_query->post->ID;
+						$permalink=get_the_permalink(@$post_id);
+						$title=get_the_title(@$post_id);
+						$excerpt=get_the_excerpt(@$post_id);
+						$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
+						$video_id=get_field("video_id",@$post_id);
+						?>
+						<div class="box-video">
+							<a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo @$video_id; ?>">
+								<div style="background-image: url('<?php echo @$featured_img; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
+									<div class="box-overlay"></div>
+									<div class="box-icon">
+										<div class="box-icon2"><i class="fas fa-play"></i></div>
+									</div>
+									<h3 class="tqpmqlbh-sapo"><?php echo @$title; ?></h3>
+								</div>
+							</a>
 						</div>
-					</a>
-				</div>
+						<?php
+					}
+					wp_reset_postdata();
+				}
+				?>
 			</div>
 			<div class="col-md-6">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="box-video2">
-							<a href="javascript:void(0);">
-								<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
-									<div class="box-overlay"></div>
-									<div class="box-icon">
-										<div class="box-icon2"><i class="fas fa-play"></i></div>
+				<?php
+				$k=0;
+				$hp_video_hd_rpt_video=get_field("hp_video_hd_rpt_video","option");
+				if(count(@$hp_video_hd_rpt_video) > 0){
+					foreach ($hp_video_hd_rpt_video as $key => $value) {
+						$post_id=$value["hp_video_hd_item"];
+						$args=array(
+							"post_type"=>"zavideo",
+							"p"=>@$post_id
+						);
+						if($k%2 == 0){
+							echo '<div class="row">';
+						}
+						$the_query=new WP_Query($args);
+						if($the_query->have_posts()){
+							while ($the_query->have_posts()){
+								$the_query->the_post();
+								$post_id=$the_query->post->ID;
+								$permalink=get_the_permalink(@$post_id);
+								$title=get_the_title(@$post_id);
+								$excerpt=get_the_excerpt(@$post_id);
+								$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
+								$video_id=get_field("video_id",@$post_id);
+								?>
+								<div class="col-md-6">
+									<div class="box-video2">
+										<a href="javascript:void(0);" class="js-modal-btn" data-video-id="<?php echo @$video_id; ?>">
+											<div style="background-image: url('<?php echo @$featured_img; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
+												<div class="box-overlay"></div>
+												<div class="box-icon">
+													<div class="box-icon2"><i class="fas fa-play"></i></div>
+												</div>
+												<h3 class="tqpmqlbh-sapo"><?php echo @$title; ?></h3>
+											</div>
+										</a>
 									</div>
-									<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
 								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="box-video2">
-							<a href="javascript:void(0);">
-								<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
-									<div class="box-overlay"></div>
-									<div class="box-icon">
-										<div class="box-icon2"><i class="fas fa-play"></i></div>
-									</div>
-									<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="box-video2">
-							<a href="javascript:void(0);">
-								<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
-									<div class="box-overlay"></div>
-									<div class="box-icon">
-										<div class="box-icon2"><i class="fas fa-play"></i></div>
-									</div>
-									<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="box-video2">
-							<a href="javascript:void(0);">
-								<div style="background-image: url('<?php echo wp_get_upload_dir()["url"]."/20181209_184858.jpg"; ?>');background-size: cover;background-repeat: no-repeat;padding-top: calc(100%/(400/200));">
-									<div class="box-overlay"></div>
-									<div class="box-icon">
-										<div class="box-icon2"><i class="fas fa-play"></i></div>
-									</div>
-									<h3 class="tqpmqlbh-sapo">Tổng quan phần mềm quản lý bán hàng Sapo</h3>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
+								<?php
+							}
+							wp_reset_postdata();
+						}
+						$k++;
+						if($k%2 == 0 || $k == count(@$hp_video_hd_rpt_video)){
+							echo '</div>';
+						}
+					}
+				}
+				?>
 			</div>
 		</div>
 	</div>
