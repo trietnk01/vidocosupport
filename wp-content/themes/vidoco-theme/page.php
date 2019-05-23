@@ -1,5 +1,5 @@
 <?php
-get_header(); 
+get_header();
 $post_id=0;
 $title="";
 $permalink="";
@@ -7,12 +7,12 @@ $excerpt="";
 $featured_img="";
 if(have_posts()){
 	while (have_posts()) {
-		the_post();                     
-		$post_id= get_the_id();        
-		$title=get_the_title(@$post_id);   
-		$permalink=get_the_permalink( @$post_id );                               
-		$excerpt=get_field("single_page_excerpt",@$post_id);    
-		$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');	            
+		the_post();
+		$post_id= get_the_id();
+		$title=get_the_title(@$post_id);
+		$permalink=get_the_permalink( @$post_id );
+		$excerpt=get_field("single_page_excerpt",@$post_id);
+		$featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
 	}
 	wp_reset_postdata();
 }
@@ -25,9 +25,9 @@ include get_template_directory()."/block/block-breadcrumb.php";
 		</div>
 		<div class="col-lg-9">
 			<div class="box-post" itemscope itemtype="http://schema.org/NewsArticle">
-				<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>				
-				<h1 class="post-title" itemprop="headline"><?php echo @$title; ?></h1>	
-				<!-- begin schema -->	
+				<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>
+				<h1 class="post-title" itemprop="headline"><?php echo @$title; ?></h1>
+				<!-- begin schema -->
 				<p style="display: none;" itemprop="author" itemscope itemtype="https://schema.org/Person"> By <span itemprop="name">DienKim</span>
 				</p>
 				<p style="display: none;" itemprop="description"><?php echo @$title; ?></p>
@@ -48,25 +48,25 @@ include get_template_directory()."/block/block-breadcrumb.php";
 				</div>
 				<meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00" style="display: none;" />
 				<meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00" style="display: none;" />
-				<!-- end schema -->						
+				<!-- end schema -->
 				<div class="post-exceprt">
 					<?php echo @$excerpt; ?>
-				</div>		
+				</div>
 				<div class="post-content">
-					<?php 
+					<?php
 					if(have_posts()){
 						while (have_posts()){
-							the_post(); 
+							the_post();
 							the_content( null, false );
 						}
 						wp_reset_postdata();
 					}
 					?>
-				</div>							
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <?php
-get_footer(); 
+get_footer();
 ?>
